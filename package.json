@@ -4,11 +4,11 @@
   "description": "Bot that tweets random thriller-esque taglines.",
   "main": "index.js",
   "scripts": {
-    "start": "node lib/daemon.js",
+    "start": "node --use-strict lib/daemon.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {
-    "node": ">=7.0.0"
+    "node": ">=4.3.2"
   },
   "keywords": [
     "tagline",
