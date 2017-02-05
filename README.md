@@ -19,8 +19,8 @@ Twit stuff
 
 Bot behavior
 
-    INTERVAL              time value parseable by `ms` library
-    TWEET_ON_START        true | false
+    INTERVAL              time value parseable by `ms` library (default: "8 hours")
+    TWEET_ON_START        true | false (default: false)
 
 ### License
 ISC
