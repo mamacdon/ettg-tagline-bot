@@ -1,0 +1,28 @@
+{
+  "name": "ettg-tagline-bot",
+  "version": "0.0.1",
+  "description": "Bot that tweets random thriller-esque taglines.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node lib/daemon.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=4.6.0"
+  },
+  "keywords": [
+    "tagline",
+    "thriller",
+    "bot",
+    "twitter"
+  ],
+  "author": "The Authors",
+  "license": "ISC",
+  "repository": "https://github.com/mamacdon/ettg-tagline-bot",
+  "dependencies": {
+    "bluebird": "^3.4.7",
+    "ettg-tagline-generator": "0.0.0",
+    "twit": "^2.2.5",
+    "winston": "^2.3.1"
+  }
+}
