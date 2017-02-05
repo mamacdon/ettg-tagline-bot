@@ -5,6 +5,10 @@ Set environment variables, then run:
 
     npm start
 
+### Running in the cloud
+* See `scripts/deploy.sh` for an example deployment script to CloudFoundry.
+* See `lambda.js` for an example of how to package this app as an AWS Lambda handler.
+
 ### Environment variables
 Twit stuff
 
