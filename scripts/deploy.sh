@@ -1,5 +1,6 @@
 #!/bin/bash
 APP_NAME=ettg-tagline-bot
+APP_DIR=$(cd `dirname $0`/.. && pwd)
 
 function load_secrets() {
     WINHOME=$HOME
@@ -11,22 +12,26 @@ function load_secrets() {
 
 # Create app if necessary
 function create_app() {
-    if ! cf app $APP_NAME; then
-        cf push -m 64M --no-route --no-start
+    if ! cf app $APP_NAME > /dev/null 2>&1; then
+        echo "Creating app..."
+        cf push $APP_NAME -m 64M --no-route --no-start
     fi
 }
 
 function set_envs() {
-    for NAME in "${!VARS[@]}"; do
-        cf set-env $APP_NAME "$NAME" "${VARS[$NAME]}"
+    for NAME in $(env | grep -e '^CF_' | cut -c4- | cut -d= -f1 ); do
+        cf set-env $APP_NAME "$NAME" "${!NAME}"
     done
 }
 
 function push_app() {
-    cf push -m 64M --no-route
+    cf push $APP_NAME -m 64M -b sdk-for-nodejs --no-route
 }
 
-load_secrets
-create_app
-set_envs
-push_app
+(
+    cd $APP_DIR
+    load_secrets
+    create_app
+    set_envs
+    push_app
+)

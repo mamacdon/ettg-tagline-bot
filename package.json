@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {
-    "node": ">=4.6.0"
+    "node": ">=7.0.0"
   },
   "keywords": [
     "tagline",
@@ -22,6 +22,7 @@
   "dependencies": {
     "bluebird": "^3.4.7",
     "ettg-tagline-generator": "0.0.0",
+    "ms": "^0.7.2",
     "twit": "^2.2.5",
     "winston": "^2.3.1"
   }
