@@ -1,5 +1,10 @@
 Uses ettg-tagline-generator to tweet random taglines on a schedule.
 
+### Usage
+Set environment variables, then run:
+
+    npm start
+
 ### Environment variables
 Twit stuff
 
