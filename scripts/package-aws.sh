@@ -5,6 +5,6 @@ FILE=ettg-tagline-bot.zip
 cd $APP_DIR
 npm prune --production
 
-zip -r $FILE . -x .git
+zip -r '--exclude=.git/*' $FILE .
 mv $FILE ../
 (cd ../ && echo "Wrote package to: " $(pwd)/$FILE)
