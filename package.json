@@ -21,7 +21,7 @@
   "repository": "https://github.com/mamacdon/ettg-tagline-bot",
   "dependencies": {
     "bluebird": "^3.4.7",
-    "ettg-tagline-generator": "0.0.2",
+    "ettg-tagline-generator": "0.1.0",
     "ms": "^0.7.2",
     "twit": "^2.2.5",
     "winston": "^2.3.1"
