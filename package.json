@@ -1,6 +1,6 @@
 {
   "name": "ettg-tagline-bot",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Bot that tweets random thriller-esque taglines.",
   "main": "index.js",
   "scripts": {
